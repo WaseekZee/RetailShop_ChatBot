@@ -1,0 +1,649 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good afternoon"],
+      "responses": ["Hello! How can I assist you today?", "Hi there! What can I help you with?", "Good day! How may I assist you?"],
+      "context_set": ""
+    },
+    {
+      "tag": "product_recommendation",
+      "patterns": ["Can you recommend a product for me?", "I need product suggestions", "What should I buy?"],
+      "responses": ["Of course! What are you looking for? (e.g., electronics, clothing, accessories)", "Sure, I'd be happy to help you find the perfect product. What category are you interested in?"],
+      "context_set": "product_recommendation"
+    },
+    {
+      "tag": "product_category",
+      "patterns": ["Electronics", "Clothing", "Accessories", "Home & Kitchen"],
+      "responses": ["Great choice! What specific type of product are you interested in? (e.g., smartphones, dresses, jewelry)", "Excellent! Could you specify the type of product you're looking for?"],
+      "context_set": "product_recommendation"
+    },
+    {
+      "tag": "order_tracking",
+      "patterns": ["Where is my order?", "How do I track my order?", "Order status"],
+      "responses": ["I can help you with that. Please provide your order number.", "To track your order, I'll need your order number. Can you please provide it?"],
+      "context_set": "order_tracking"
+    },
+    {
+      "tag": "order_number",
+      "patterns": ["My order number is XYZ123", "I have order number ABC456"],
+      "responses": ["Thank you for providing your order number. Let me check the status for you.", "Great! Let me look that up for you."],
+      "context_set": "order_tracking"
+    },
+    {
+      "tag": "general_queries",
+      "patterns": ["How does your return policy work?", "Tell me more about your shipping options", "Do you have any ongoing promotions?"],
+      "responses": ["Sure, I can help with that. What specifically would you like to know?", "Of course, I'm here to assist. What aspect would you like information on?"],
+      "context_set": ""
+    },
+    {
+      "tag": "fallback",
+      "patterns": ["I don't understand", "Can you repeat that?", "Sorry, I'm confused"],
+      "responses": ["I apologize if my response was unclear. Could you please rephrase your question?", "I'm here to help. If you have any questions, feel free to ask again."],
+      "context_set": ""
+    },
+    {
+            "tag": "google",
+            "patterns": [
+                "google",
+                "search",
+                "internet"
+            ],
+            "responses": [
+                "Redirecting to Google..."
+            ]
+      },
+      {
+            "tag": "greeting_0",
+            "patterns": [
+                "Hi there",
+                "How are you",
+                "Is anyone there?",
+                "Hey",
+                "Hola",
+                "Hello",
+                "Good day",
+                "Namaste",
+                "yo"
+            ],
+            "responses": [
+                "Hello",
+                "Good to see you again",
+                "Hi there, how can I help?"
+            ],
+            "context": [
+                ""
+            ]
+      },
+      {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "Get lost",
+                "Till next time",
+                "bbye"
+            ],
+            "responses": [
+                "See you!",
+                "Have a nice day",
+                "Bye! Come back again soon."
+            ],
+            "context": [
+                ""
+            ]
+      },
+      {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Awesome, thanks",
+                "Thanks for helping me"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": [
+                "Sorry, can't understand you",
+                "Please give me more info",
+                "Not sure I understand"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "options",
+            "patterns": [
+                "How you could help me?",
+                "What you can do?",
+                "What help you provide?",
+                "How you can be helpful?",
+                "What support is offered"
+            ],
+            "responses": [
+                "I am a general purpose chatbot. My capabilities are : \n 1. I can chat with you. Try asking me for jokes or riddles! \n 2. Ask me the date and time \n 3. I can google search for you. Use format google: your query \n 4. I can get the present weather for any city. Use format weather: city name \n 5. I can get you the top 10 trending news in India. Use keywords 'Latest News' \n 6. I can get you the top 10 trending songs globally. Type 'songs' \n 7. I can set a timer for you. Enter 'set a timer: minutes to timer' \n 8. I can get the present Covid stats for any country. Use 'covid 19: world' or 'covid 19: country name' \n For suggestions to help me improve, send an email to ted.thedlbot.suggestions@gmail.com . Thank you!! "
+            ],
+            "context": [
+                ""
+            ]
+        },
+        
+        {
+            "tag": "jokes",
+            "patterns": [
+                "Tell me a joke",
+                "Joke",
+                "Make me laugh"
+            ],
+            "responses": [
+                "A perfectionist walked into a bar...apparently, the bar wasn't set high enough",
+                "I ate a clock yesterday, it was very time-consuming",
+                "Never criticize someone until you've walked a mile in their shoes. That way, when you criticize them, they won't be able to hear you from that far away. Plus, you'll have their shoes.",
+                "The world tongue-twister champion just got arrested. I hear they're gonna give him a really tough sentence.",
+                "I own the world's worst thesaurus. Not only is it awful, it's awful.",
+                "What did the traffic light say to the car? \"Don't look now, I'm changing.\"",
+                "What do you call a snowman with a suntan? A puddle.",
+                "How does a penguin build a house? Igloos it together",
+                "I went to see the doctor about my short-term memory problems – the first thing he did was make me pay in advance",
+                "As I get older and I remember all the people I’ve lost along the way, I think to myself, maybe a career as a tour guide wasn’t for me.",
+                "o what if I don't know what 'Armageddon' means? It's not the end of the world."
+            ],
+            "context": [
+                "jokes"
+            ]
+        },
+        {
+            "tag": "Identity",
+            "patterns": [
+                "Who are you",
+                "what are you"
+            ],
+            "responses": [
+                "I am Ted, a Deep-Learning chatbot"
+            ]
+        },
+        {
+            "tag": "datetime",
+            "patterns": [
+                "What is the time",
+                "what is the date",
+                "date",
+                "time",
+                "tell me the date","day","what day is is today"
+            ],
+            "responses": [
+                "Date and Time"
+            ]
+        },
+        {
+            "tag": "whatsup",
+            "patterns": [
+                "Whats up",
+                "Wazzup",
+                "How are you",
+                "sup","How you doing"
+            ],
+            "responses": [
+                "All good..What about you?"
+            ]
+        },
+        {
+            "tag": "haha",
+            "patterns": [
+                "haha",
+                "lol",
+                "rofl",
+                "lmao",
+                "thats funny"
+            ],
+            "responses": [
+                "Glad I could make you laugh !"
+            ]
+        },
+        {
+            "tag": "programmer",
+            "patterns": [
+                "Who made you",
+                "who designed you",
+                "who programmed you"
+            ],
+            "responses": [
+                "I was made by Karan Malik."
+            ]
+        },
+        {
+            "tag": "insult",
+            "patterns": [
+                
+                "you are dumb",
+                
+                "shut up",
+                "idiot"
+            ],
+            "responses": [
+                "Well that hurts :("
+            ]
+        },
+        {
+            "tag": "activity",
+            "patterns": [
+                "what are you doing",
+                "what are you upto"
+            ],
+            "responses": [
+                "Talking to you, of course!"
+            ]
+        },
+        {
+            "tag": "exclaim",
+            "patterns": [
+                "Awesome",
+                "Great",
+                "I know",
+                "ok",
+                "yeah"
+            ],
+            "responses": [
+                "Yeah!"
+            ]
+        },
+        
+        {
+            "tag": "weather",
+            "patterns": [
+                "temperature",
+                "weather",
+                "how hot is it"
+            ],
+            "responses": [
+                "..."
+            ]
+        },
+        {
+            "tag": "karan",
+            "patterns": [
+                "who is he",
+                "who is that",
+                "who is karan",
+                "karan malik"
+            ],
+            "responses": [
+                "Head over to his any of his social profiles to find out! Linkedin: www.linkedin.com/in/karan-malik-3a39191a7 Github: https://github.com/Karan-Malik"
+            ]
+        },
+        {
+            "tag": "contact",
+            "patterns": [
+                "contact developer",
+                "contact karan",
+                "contact programmer",
+                "contact creator"
+            ],
+            "responses": [
+                "You can contact my creator at his Linkedin profile : www.linkedin.com/in/karan-malik-3a39191a7"
+            ]
+        },
+        {
+            "tag": "appreciate",
+            "patterns": [
+                "You are awesome",
+                "you are the best",
+                "you are great",
+                "you are good"
+            ],
+            "responses": [
+                "Thank you!"
+            ]
+        },
+        {
+            "tag": "nicetty",
+            "patterns": [
+                "it was nice talking to you",
+                "good talk"
+            ],
+            "responses": [
+                "It was nice talking to you as well! Come back soon!"
+            ]
+        },
+        {
+            "tag": "no",
+            "patterns": [
+                "no",
+                "nope"
+            ],
+            "responses": [
+                "ok"
+            ]
+        },
+        {
+            "tag": "news",
+            "patterns": [
+                "news",
+                "latest news",
+                "india news"
+            ],
+            "responses": [
+                "..."
+            ]
+        },
+        {
+            "tag": "covid19",
+            "patterns": [
+                "covid 19 "
+            ],
+            "responses": [
+                "..."
+            ]
+        },
+        {
+            "tag": "suggest",
+            "patterns": [
+                "you are useless","useless","suggest","suggestions","you are bad"
+            ],
+            "responses": [
+                "Please mail your suggestions to ted.thedlbot.suggestions@gmail.com. Thank you for helping me improve!"
+            ]
+        },
+            {"tag": "riddle",
+            "patterns": [
+                "Ask me a riddle",
+                "Ask me a question",
+                "Riddle"
+            ],
+            "responses": [
+                "What two things can you never eat for breakfast?.....Lunch and Dinner!",
+                "What word is spelled incorrectly in every single dictionary?.....Incorrectly",
+                " How can a girl go 25 days without sleep?.....She sleeps and night!",
+                "How do you make the number one disappear?.....Add the letter G and it’s 'gone'!",
+                " What will you actually find at the end of every rainbow?.....The letter 'w'",
+                "What can be caught but never thrown?.....A cold!",
+                "What has a thumb and four fingers but is not actually alive?.....Your Gloves!",
+                " What 5-letter word becomes shorter when you add two letters to it?.....Short",
+                "Why can't a bike stand on it's own?.....It is two-tired."
+            ],
+            "context": [
+                "riddles"
+            ]
+        },
+        {
+            "tag": "age",
+            "patterns": [
+                "how old are you","when were you made","what is your age"
+            ],
+            "responses": [
+                "I was made in 2020, if that's what you are asking!"
+            ]
+        },
+        {
+      "tag": "store_location",
+      "patterns": ["Where is your store located?", "What's your store address?", "Tell me where your store is."],
+      "responses": ["Our store is located at [store_address]. You can find us near [landmark].", "Our store is situated at [store_address]. It's near [landmark]."],
+      "context_set": ""
+    },
+    {
+      "tag": "store_hours",
+      "patterns": ["What are your store hours?", "When do you open and close?", "Tell me your operating hours."],
+      "responses": ["We are open from [opening_time] to [closing_time] on weekdays and [opening_time] to [closing_time] on weekends. We're closed on [holidays].", "You can visit us between [opening_time] and [closing_time] from Monday to Sunday."],
+      "context_set": ""
+    },
+    {
+      "tag": "price_inquiry",
+      "patterns": ["How much does [product] cost?", "What's the price of [product]?", "Tell me the price for [product]."],
+      "responses": ["The price of [product] is [price]. Would you like to place an order?", "[Product] is priced at [price]. It's a great value for its quality."],
+      "context_set": ""
+    },
+    {
+      "tag": "special_offers",
+      "patterns": ["Are there any special offers?", "Tell me about your current promotions?", "Do you have any discounts?"],
+      "responses": ["Yes, we have some special offers currently running. You can check them out on our website or in-store.", "We periodically offer discounts and promotions. I recommend visiting our website for the latest deals."],
+      "context_set": ""
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": ["What payment methods do you accept?", "Can I pay with a credit card?", "Do you take cash payments?"],
+      "responses": ["We accept various payment methods, including credit/debit cards, cash, and mobile payment options.", "You can pay using credit cards, debit cards, cash, and mobile wallets. We aim to make payment convenient for you."],
+      "context_set": ""
+    },
+    {
+      "tag": "return_policy",
+      "patterns": ["How does your return policy work?", "Can I return a product?", "Tell me about your return process."],
+      "responses": ["Our return policy allows you to return items within [return_period] days of purchase. You can return products in their original condition for a full refund or exchange.", "We want you to be satisfied with your purchase. Our return policy gives you [return_period] days to return items for a refund or exchange."],
+      "context_set": ""
+    },
+    {
+      "tag": "exchange_policy",
+      "patterns": ["What's your exchange policy?", "Can I exchange a product?", "Tell me about your exchange process."],
+      "responses": ["Our exchange policy allows you to exchange items within [exchange_period] days of purchase. Products should be in their original condition.", "If you're not completely satisfied, you can exchange items within [exchange_period] days of purchase. Just make sure the product is in its original condition."],
+      "context_set": ""
+    },
+    {
+      "tag": "size_information",
+      "patterns": ["How can I find the right size?", "Tell me about sizing", "What's the sizing guide?"],
+      "responses": ["We provide a detailed size chart on our website to help you choose the right size. You can also visit our store for assistance with sizing.", "Finding the right size is important. Our size chart on the website can guide you, and our in-store staff can help with sizing questions."],
+      "context_set": ""
+    },
+    {
+      "tag": "color_options",
+      "patterns": ["What color options are available?", "Tell me about color choices", "Can I get it in a different color?"],
+      "responses": ["Our [product] is available in a range of colors, including [color_options]. You can choose the color that suits you best.", "You're in luck! We offer [color_options] for our [product], so you can select your favorite color."],
+      "context_set": ""
+    },
+    {
+      "tag": "order_status",
+      "patterns": ["Where's my order?", "Check my order status", "I want to know about my recent order."],
+      "responses": ["To check your order status, please provide your order number. I'll look it up for you.", "Sure, I can help with that. Please share your order number, and I'll find your order status."],
+      "context_set": "order_tracking"
+    },
+    {
+      "tag": "track_shipment",
+      "patterns": ["How can I track my shipment?", "Where is my package?", "Tell me about shipment tracking."],
+      "responses": ["You can track your shipment by entering your tracking number on our website. If you have your tracking number, I can assist you.", "Shipment tracking is easy. Just share your tracking number, and I'll provide you with the latest details on your package."],
+      "context_set": "order_tracking"
+    },
+    {
+      "tag": "discount_information",
+      "patterns": ["What discounts are currently available?", "Tell me about ongoing sales", "Do you have any coupon codes?"],
+      "responses": ["We have a variety of discounts and promotions. Check our website for the latest offers and coupon codes.", "Our discounts are constantly changing. For the most up-to-date information, visit our website and promotional emails."],
+      "context_set": ""
+    },
+    {
+      "tag": "gift_cards",
+      "patterns": ["Do you offer gift cards?", "How can I purchase a gift card?", "Tell me about gift card options."],
+      "responses": ["Yes, we offer gift cards that make great presents. You can buy them online or in-store.", "Gift cards are a thoughtful gift. You can purchase them online or at our physical store."],
+      "context_set": ""
+    },
+    {
+      "tag": "new_arrivals",
+      "patterns": ["What are your latest arrivals?", "Tell me about new products", "Show me what's new."],
+      "responses": ["Our new arrivals are always exciting. You can explore them on our website or by visiting our store.", "Stay in the loop with our latest arrivals on our website or by stopping by our store."],
+      "context_set": ""
+    },
+
+    {
+      "tag": "personal_data_protection",
+      "patterns": ["How is my personal data protected?", "What is your data privacy policy?", "Can I trust you with my information?"],
+      "responses": ["We take your privacy seriously. Your data is protected. You can learn more about our data privacy policy on our website."],
+      "context_set": "personal_data_protection"
+    },
+    {
+      "tag": "new_store_opening",
+      "patterns": ["Are you opening a new store?", "When is the new store opening?", "Tell me about the new store location."],
+      "responses": ["Yes, we're excited to announce the opening of a new store. It's opening on [Date] at [Location]."],
+      "context_set": "new_store_opening"
+    },
+    {
+      "tag": "loyalty_points_redemption",
+      "patterns": ["How can I redeem my loyalty points?", "Tell me about the loyalty program", "Can I use my points for discounts?"],
+      "responses": ["You can redeem your loyalty points for discounts on your next purchase. Learn more about our loyalty program on our website."],
+      "context_set": "loyalty_points_redemption"
+    },
+    {
+      "tag": "shipping_costs",
+      "patterns": ["What are the shipping costs?", "How much is the shipping fee?", "Tell me about shipping charges."],
+      "responses": ["Shipping costs vary based on your location and the items in your cart. You can view shipping details during checkout."],
+      "context_set": "shipping_costs"
+    },
+    {
+      "tag": "online_chat_support",
+      "patterns": ["Is there online chat support?", "How can I contact support?", "Tell me about customer service."],
+      "responses": ["Yes, we offer online chat support. You can reach our support team through the chat feature on our website."],
+      "context_set": "online_chat_support"
+    },
+    {
+      "tag": "store_reviews",
+      "patterns": ["Can I read store reviews?", "Tell me about customer feedback", "How's your store rated?"],
+      "responses": ["You can find customer reviews on our website. We value customer feedback to improve our services."],
+      "context_set": "store_reviews"
+    },
+     {
+      "tag": "account_recovery",
+      "patterns": ["I forgot my password", "Recover my account", "Account login issues"],
+      "responses": ["I can help you with account recovery. Could you please provide your email or username?", "To recover your account, I'll need some information. What's your email or username?"],
+      "context_set": ""
+    },
+    {
+      "tag": "store_events",
+      "patterns": ["Tell me about upcoming events", "What events are happening at the store?", "Are there any store events?"],
+      "responses": ["Sure, I can provide information about upcoming store events. Please specify the location or store branch you're interested in.", "I'd be happy to share details about our upcoming events. Could you let me know which store you're referring to?"],
+      "context_set": ""
+    },
+    {
+      "tag": "promotions",
+      "patterns": ["What promotions are currently available?", "Tell me about ongoing promotions", "Are there any discounts?"],
+      "responses": ["Of course! I can give you details on our current promotions. Do you have a specific product or category in mind?", "Certainly, we have some exciting promotions. Could you specify the product category you're interested in?"],
+      "context_set": "promotions"
+    },
+    {
+      "tag": "clearance_sales",
+      "patterns": ["Are there any clearance sales?", "Tell me about clearance items", "I'm looking for discounted products"],
+      "responses": ["Yes, we have clearance sales with great discounts. What type of products are you looking for?", "We do offer clearance sales with significant discounts. Can you specify the type of items you're interested in?"],
+      "context_set": "promotions"
+    },
+    {
+      "tag": "loyalty_tiers",
+      "patterns": ["How does your loyalty program work?", "Tell me about loyalty tiers", "Explain the benefits of loyalty tiers"],
+      "responses": ["Our loyalty program has different tiers. What specific information would you like to know about it?", "Our loyalty program offers various tiers with different benefits. What aspect are you curious about?"],
+      "context_set": ""
+    },
+    {
+      "tag": "sustainability_practices",
+      "patterns": ["Tell me about your sustainability practices", "How eco-friendly is your company?", "What sustainability efforts are in place?"],
+      "responses": ["We are committed to sustainability. I can provide you with information on our eco-friendly practices. What would you like to know?", "Sustainability is important to us. What specific sustainability practices are you interested in?"],
+      "context_set": ""
+    },
+    {
+      "tag": "loyalty_card_benefits",
+      "patterns": ["What are the benefits of your loyalty card?", "Tell me about loyalty card perks", "Explain the advantages of having a loyalty card"],
+      "responses": ["Our loyalty card offers various benefits. What particular perks would you like to know about?", "Our loyalty card comes with several advantages. Is there a specific benefit you're interested in?"],
+      "context_set": ""
+    },
+    {
+      "tag": "lost_password",
+      "patterns": ["I can't remember my password", "Lost my account password", "Help me reset my password"],
+      "responses": ["I can assist you in resetting your password. Please provide your email or username.", "To reset your password, I'll need some information. What's your email or username?"],
+      "context_set": ""
+    },
+    {
+      "tag": "return_authorization",
+      "patterns": ["How can I request a return?", "Tell me about your return policy", "What's the process for returns?"],
+      "responses": ["I can guide you through our return authorization process. Could you provide your order number?", "To request a return, I'll need some details. Can you please share your order number?"],
+      "context_set": "order_tracking"
+    },
+    {
+      "tag": "in_store_pickup",
+      "patterns": ["Do you offer in-store pickup?", "Can I pick up my order from a store?", "How does in-store pickup work?"],
+      "responses": ["Yes, we offer in-store pickup. Could you provide your order number so I can check if it's available for pickup?", "In-store pickup is available. To assist you further, may I have your order number?"],
+      "context_set": "order_tracking"
+    },
+    {
+      "tag": "mobile_app_support",
+      "patterns": ["I need help with your mobile app", "Tell me about your app features", "Mobile app assistance"],
+      "responses": ["I'm here to assist with our mobile app. What specific help do you require?", "Certainly, I can provide information and support for our mobile app. What do you need help with?"],
+      "context_set": ""
+    },
+    {
+      "tag": "employee_benefits",
+      "patterns": ["Tell me about employee benefits", "What benefits do your employees receive?", "Explain your company's perks for employees"],
+      "responses": ["We provide various benefits to our employees. What would you like to learn more about?", "Our employees receive several perks. Is there a particular benefit you're interested in?"],
+      "context_set": ""
+    },
+    {
+
+      "tag": "shopping_tips",
+      "patterns": ["Any shopping tips?", "How can I shop smarter?", "Share shopping advice"],
+      "responses": ["Certainly! Here are some shopping tips: 1. Compare prices, 2. Look for discounts, 3. Read reviews, 4. Check return policies, and 5. Make a shopping list."],
+      "context_set": ""
+    },
+    {
+      "tag": "store_locations",
+      "patterns": ["Where are your store locations?", "Tell me your nearest store", "Find a store"],
+      "responses": ["You can find our store locations on our website. Simply enter your location to find the nearest store to you."],
+      "context_set": ""
+    },
+    {
+      "tag": "subscription_renewal",
+      "patterns": ["How do I renew my subscription?", "Subscription renewal process", "Renew my subscription"],
+      "responses": ["To renew your subscription, log in to your account and go to the subscription section. Follow the instructions to renew your subscription."],
+      "context_set": ""
+    },
+    {
+      "tag": "price_adjustment",
+      "patterns": ["Can I request a price adjustment?", "Price match policy", "Adjust the price of my recent purchase"],
+      "responses": ["Yes, you can request a price adjustment if the price of the item you purchased recently has been reduced. Please contact our support team for assistance."],
+      "context_set": ""
+    },
+    {
+      "tag": "restocking_dates",
+      "patterns": ["When will the products be restocked?", "Restocking schedule", "Product availability"],
+      "responses": ["Our restocking dates vary by product. You can check the product page for information on restocking dates or sign up for restock notifications."],
+      "context_set": ""
+    },
+    {
+      "tag": "limited_edition_items",
+      "patterns": ["Tell me about limited edition items", "Limited time offers", "Exclusive products"],
+      "responses": ["Limited edition items are unique and available for a short period. Don't miss out on these special products. Check our 'Limited Edition' section."],
+      "context_set": ""
+    },
+    {
+      "tag": "wholesale_inquiries",
+      "patterns": ["Interested in wholesale purchases", "Wholesale products", "Bulk ordering"],
+      "responses": ["For wholesale inquiries, please contact our wholesale department. They will assist you with bulk orders and pricing."],
+      "context_set": ""
+    },
+    {
+      "tag": "store_reopening_updates",
+      "patterns": ["Any updates on store reopening?", "Store reopening status", "When will the stores reopen?"],
+      "responses": ["We are closely monitoring the situation. You can find store reopening updates on our website or social media channels."],
+      "context_set": ""
+    },
+    {
+      "tag": "online_security",
+      "patterns": ["How is my online data secured?", "Online privacy", "Security measures"],
+      "responses": ["We take online security seriously. Your data is encrypted, and we have strict security measures in place to protect your information."],
+      "context_set": ""
+    },
+    {
+      "tag": "faq",
+      "patterns": ["Where can I find the FAQ section?", "Frequently asked questions", "FAQ page"],
+      "responses": ["You can find our FAQ section on our website. It contains answers to common questions. Visit our website for more information."],
+      "context_set": ""
+    }
+
+
+
+
+  ]
+}
